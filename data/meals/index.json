@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "current": "2026-11-30",
+  "weeks": [
+    { "weekStart": "2026-11-30", "file": "weeks/2026-11-30.json", "status": "published" }
+  ]
+}

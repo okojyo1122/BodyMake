@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="夫婦2人分の週間献立・買い物リスト・予算管理">
+<title>週間献立・買い物リスト｜BodyMake</title>
+<link rel="stylesheet" href="meals.css">
+<script type="module" src="app.js"></script>
+</head><body>
+<header><div class="wrap">
+  <p class="crumb"><a href="../">← トレーニングガイドへ戻る</a></p>
+  <h1>週間献立・買い物リスト</h1>
+  <p>大人2人分／週の食費上限 <span id="hdr-limit">10,000円</span>（お米は対象外）</p>
+  <label class="week-select">対象週 <select id="week-select" aria-label="対象週"></select></label>
+</div></header>
+<main>
+  <section class="notice" aria-labelledby="notice-title">
+    <h2 id="notice-title">アレルギー・推定値についての注意</h2>
+    <ul>
+      <li id="allergen-status">えび・かにの判定：確認中…</li>
+      <li id="allergen-notice">加工食品・調味料・だしなどは、えび・かにを含む／同じ工場で製造している場合があります。<strong>購入前に必ず原材料表示を確認してください。</strong></li>
+      <li>価格は東京都内の一般的なスーパーを想定した<strong>推定（概算）</strong>、栄養値は<strong>目安</strong>です。実際の店舗価格・商品の栄養表示とは異なります。</li>
+    </ul>
+  </section>
+
+  <div id="status" role="status" aria-live="polite"></div>
+
+  <nav aria-label="ページ内リンク">
+    <a href="#budget">予算</a><a href="#plan">週間献立</a><a href="#shopping">買い物リスト</a><a href="#label-check">原材料確認</a><a href="#settings">個別設定</a>
+  </nav>
+
+  <section id="budget" class="card" aria-labelledby="budget-title">
+    <h2 id="budget-title">予算（概算）</h2>
+    <div id="budget-body"><p class="muted">読み込み中…</p></div>
+  </section>
+
+  <section id="plan" aria-labelledby="plan-title">
+    <h2 id="plan-title" class="section-title">週間献立</h2>
+    <p class="muted" id="plan-meta"></p>
+    <div id="plan-body"></div>
+  </section>
+
+  <section id="shopping" class="card" aria-labelledby="shopping-title">
+    <h2 id="shopping-title">買い物リスト</h2>
+    <p class="muted">献立（朝食7日分を含む）から食材を自動で合算しています。「在庫あり」にした食材は購入予定額から除外されます。チェック状態はこのブラウザに保存されます。新しい週を初めて表示したときは、前の週の「在庫あり」のうち常備品（調味料・ジャム）だけを引き継ぎます。</p>
+    <div class="shop-tools">
+      <button type="button" id="clear-purchased">購入済みをすべて外す</button>
+      <button type="button" id="clear-stock">在庫ありをすべて外す</button>
+      <button type="button" id="stock-staples">常備品をすべて在庫ありにする</button>
+    </div>
+    <div id="shopping-body"></div>
+  </section>
+
+  <section id="label-check" class="card" aria-labelledby="label-title">
+    <h2 id="label-title">購入前に原材料確認が必要な食材</h2>
+    <p class="muted">加工食品・調味料などは商品によって原材料が異なるため、安全とは判定していません。購入時にパッケージのアレルギー表示（えび・かに）を確認してください。</p>
+    <p class="muted" id="label-risk-note"></p>
+    <ul id="label-body" class="label-list"></ul>
+  </section>
+
+  <section id="settings" class="card" aria-labelledby="settings-title">
+    <h2 id="settings-title">個別設定</h2>
+    <p class="muted">昼食・夕食のご飯の量と主菜の量（倍率）を人ごとに調整できます。朝食の一部の数量も変更できます。変更は献立・買い物リスト・予算・栄養にすぐ反映され、このブラウザに保存されます。</p>
+    <form id="settings-form" novalidate></form>
+  </section>
+</main>
+<footer>個人用の献立補助資料です。価格は推定、栄養値は目安です。食物アレルギーの判断は必ず商品表示で行ってください。</footer>
+<noscript><p style="padding:16px">このページの表示にはJavaScriptが必要です。</p></noscript>
+</body></html>

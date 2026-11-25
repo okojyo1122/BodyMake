@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "description": "週間献立の確定条件。献立生成（手動・AI）と画面表示の両方がこの条件を参照する。",
+  "people": [
+    {
+      "id": "me",
+      "label": "本人"
+    },
+    {
+      "id": "wife",
+      "label": "妻"
+    }
+  ],
+  "budget": {
+    "weeklyLimitYen": 10000,
+    "nearLimitRatio": 0.9,
+    "priceBasis": "東京都内の一般的なスーパーを想定した推定価格（税込・概算）",
+    "outOfScope": [
+      "プロテイン",
+      "間食"
+    ]
+  },
+  "rice": {
+    "ingredientId": "rice_cooked",
+    "cookedToRawRatio": 0.43,
+    "note": "お米は実家から届くため予算対象外。必要量のみ表示する。"
+  },
+  "allergens": {
+    "excluded": [
+      {
+        "id": "shrimp",
+        "label": "えび",
+        "keywords": [
+          "えび",
+          "海老",
+          "蝦",
+          "しゅりんぷ",
+          "ろぶすたー",
+          "おまーる",
+          "shrimp",
+          "prawn",
+          "lobster"
+        ]
+      },
+      {
+        "id": "crab",
+        "label": "かに",
+        "keywords": [
+          "かに",
+          "がに",
+          "蟹",
+          "ずわい",
+          "たらば",
+          "crab"
+        ]
+      }
+    ],
+    "sharedKeywords": [
+      "甲殻類"
+    ],
+    "normalization": "判定前に NFKC（全角・半角の統一）と英字の小文字化を行い、ひらがな・カタカナの両方の表記で照合する。keywords は正規化後のひらがな・漢字・英小文字で書く。",
+    "levels": {
+      "error": "アレルゲン検出（検証エラー）",
+      "warning": "判定が曖昧（要確認の警告）",
+      "none": "登録データ上で検出なし（安全を保証するものではない）"
+    },
+    "fieldModes": {
+      "ingredientName": "strict",
+      "containsAllergens": "strict",
+      "recipeName": "name",
+      "steps": "prose"
+    },
+    "fieldModesNote": "strict：除外処理を一切しない（副詞の形でも検出＝エラー）。name：明確な副詞（adverbWhitelist）に当たる語は警告、それ以外はエラー。prose：明確な副詞は検出なし、ambiguousPatterns に当たる語は警告、それ以外はエラー。",
+    "adverbWhitelist": [
+      "なめらかに",
+      "滑らかに",
+      "静かに",
+      "しずかに",
+      "柔らかに",
+      "やわらかに",
+      "軟らかに",
+      "細かに",
+      "こまかに",
+      "鮮やかに",
+      "あざやかに",
+      "穏やかに",
+      "おだやかに",
+      "緩やかに",
+      "ゆるやかに",
+      "速やかに",
+      "すみやかに",
+      "ほのかに",
+      "仄かに",
+      "わずかに",
+      "僅かに",
+      "たしかに",
+      "確かに",
+      "明らかに",
+      "あきらかに",
+      "豊かに",
+      "ゆたかに",
+      "爽やかに",
+      "さわやかに",
+      "まろやかに",
+      "にぎやかに",
+      "賑やかに",
+      "清らかに",
+      "きよらかに",
+      "ひそかに",
+      "密かに",
+      "かすかに",
+      "微かに",
+      "はるかに",
+      "遥かに",
+      "あたたかに",
+      "温かに",
+      "暖かに",
+      "にわかに",
+      "俄かに",
+      "つややかに",
+      "艶やかに",
+      "しなやかに",
+      "すこやかに",
+      "健やかに",
+      "なごやかに",
+      "和やかに",
+      "おおらかに",
+      "大らかに",
+      "ほがらかに",
+      "朗らかに",
+      "やすらかに",
+      "安らかに",
+      "おろかに",
+      "愚かに",
+      "ふくよかに",
+      "こまやかに",
+      "細やかに"
+    ],
+    "ambiguousPatterns": [
+      "[やらよ]かに",
+      "たらば"
+    ],
+    "ambiguousPatternsNote": "prose（調理手順）で、副詞の可能性もあるがアレルゲンの可能性も否定できない表記（未登録の「〜やかに」「〜らかに」、ひらがなの「たらば」＝「煮立ったらばらす」等）。検出なしにはせず、要確認の警告にする。ひらがな表記にのみ適用し、カタカナ・漢字は常にエラー。",
+    "notice": "えび・かにの判定は、登録データ（食材名・原材料情報・料理名・手順）の表記に基づくものです。検出されなかった場合も安全を保証するものではありません。加工食品・調味料・だしなどは、購入時に実際の商品パッケージの原材料表示と、混入（同じ工場・ラインでの製造など）に関する注意表示を必ず確認してください。"
+  },
+  "defaults": {
+    "mealRiceGrams": {
+      "me": 150,
+      "wife": 150
+    },
+    "mainDishFactor": {
+      "me": 1,
+      "wife": 1
+    }
+  },
+  "settingsLimits": {
+    "mealRiceGrams": {
+      "min": 0,
+      "max": 400,
+      "step": 10
+    },
+    "mainDishFactor": {
+      "min": 0.5,
+      "max": 2,
+      "step": 0.1
+    }
+  },
+  "breakfasts": {
+    "me": {
+      "title": "本人の固定朝食",
+      "items": [
+        {
+          "key": "rice",
+          "ingredient": "rice_cooked",
+          "qty": 100,
+          "unit": "g",
+          "label": "ご飯"
+        },
+        {
+          "key": "tofu",
+          "ingredient": "tofu_kinu",
+          "qty": 150,
+          "unit": "g",
+          "label": "絹豆腐"
+        },
+        {
+          "key": "natto",
+          "ingredient": "natto",
+          "qty": 1,
+          "unit": "パック",
+          "label": "納豆"
+        },
+        {
+          "key": "egg",
+          "ingredient": "egg",
+          "qty": 1,
+          "unit": "個",
+          "label": "卵"
+        },
+        {
+          "key": "mekabu",
+          "ingredient": "mekabu",
+          "qty": 1,
+          "unit": "パック",
+          "label": "めかぶ"
+        }
+      ]
+    },
+    "wife": {
+      "title": "妻の固定朝食",
+      "items": [
+        {
+          "key": "bread",
+          "ingredient": "bread_6",
+          "qty": 2,
+          "unit": "枚",
+          "label": "食パン"
+        },
+        {
+          "key": "jam",
+          "ingredient": "jam",
+          "qty": 1,
+          "unit": "大さじ",
+          "label": "ジャム",
+          "editable": {
+            "min": 0,
+            "max": 3,
+            "step": 0.5
+          },
+          "provisional": true
+        },
+        {
+          "key": "egg",
+          "ingredient": "egg",
+          "qty": 1,
+          "unit": "個",
+          "label": "スクランブルエッグ（卵）",
+          "editable": {
+            "min": 0,
+            "max": 4,
+            "step": 1
+          },
+          "provisional": true
+        },
+        {
+          "key": "sausage",
+          "ingredient": "sausage",
+          "qty": 2,
+          "unit": "本",
+          "label": "ソーセージ",
+          "editable": {
+            "min": 0,
+            "max": 6,
+            "step": 1
+          },
+          "provisional": true
+        },
+        {
+          "key": "oil",
+          "ingredient": "salad_oil",
+          "qty": 1,
+          "unit": "小さじ",
+          "label": "調理油（スクランブルエッグ・ソーセージ用）",
+          "editable": {
+            "min": 0,
+            "max": 3,
+            "step": 0.5
+          },
+          "provisional": true
+        }
+      ]
+    }
+  },
+  "rules": {
+    "noRepeatWeeks": 2,
+    "noRepeatKinds": [
+      "main"
+    ],
+    "daysPerWeek": 7,
+    "weekStartsOn": "monday"
+  }
+}
