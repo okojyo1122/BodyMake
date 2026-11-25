@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "weekStart": "2026-11-30",
+  "title": "2026年11月30日〜12月6日の献立",
+  "source": {
+    "type": "manual",
+    "createdAt": "2026-11-25",
+    "note": "初期データ。分量はレシピ上の2人分（主菜倍率1.0）。ご飯は個別設定から算出。"
+  },
+  "days": [
+    { "date": "2026-11-30",
+      "lunch":  { "recipes": ["oyakodon"], "withRice": true },
+      "dinner": { "recipes": ["pork_shogayaki", "miso_tofu_negi"], "withRice": true } },
+    { "date": "2026-12-01",
+      "lunch":  { "recipes": ["soboro_don", "komatsuna_ohitashi"], "withRice": true },
+      "dinner": { "recipes": ["salmon_foil", "miso_cabbage_carrot"], "withRice": true } },
+    { "date": "2026-12-02",
+      "lunch":  { "recipes": ["yaki_udon"], "withRice": false },
+      "dinner": { "recipes": ["chicken_teriyaki", "moyashi_namul"], "withRice": true } },
+    { "date": "2026-12-03",
+      "lunch":  { "recipes": ["saba_daikon", "komatsuna_egg"], "withRice": true },
+      "dinner": { "recipes": ["mabo_tofu_wafu"], "withRice": true } },
+    { "date": "2026-12-04",
+      "lunch":  { "recipes": ["pork_moyashi_shio"], "withRice": true },
+      "dinner": { "recipes": ["chicken_daikon_nimono"], "withRice": true } },
+    { "date": "2026-12-05",
+      "lunch":  { "recipes": ["egg_fried_rice", "moyashi_soup"], "withRice": true },
+      "dinner": { "recipes": ["chicken_broccoli_garlic"], "withRice": true } },
+    { "date": "2026-12-06",
+      "lunch":  { "recipes": ["nikujaga"], "withRice": true },
+      "dinner": { "recipes": ["tofu_hamburg"], "withRice": true } }
+  ],
+  "recipes": {
+    "oyakodon": {
+      "name": "鶏むね肉の親子丼", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_breast", "qty": 200, "unit": "g", "main": true },
+        { "id": "egg", "qty": 3, "unit": "個" },
+        { "id": "onion", "qty": 1, "unit": "個" },
+        { "id": "soy_sauce", "qty": 2, "unit": "大さじ" },
+        { "id": "mirin", "qty": 2, "unit": "大さじ" },
+        { "id": "sugar", "qty": 2, "unit": "小さじ" },
+        { "id": "dashi_granule", "qty": 1, "unit": "小さじ" }
+      ],
+      "steps": [
+        "鶏むね肉は一口大のそぎ切り、玉ねぎは薄切りにする。",
+        "小さめのフライパンに水150ml・だし・醤油・みりん・砂糖を入れて煮立て、玉ねぎを3分煮る。",
+        "鶏肉を加え、ふたをして中火で5分ほど、中まで火を通す。",
+        "溶き卵を回し入れ、半熟になったら火を止めてご飯にのせる。"
+      ]
+    },
+    "pork_shogayaki": {
+      "name": "豚こまとキャベツの生姜焼き", "kind": "main",
+      "ingredients": [
+        { "id": "pork_koma", "qty": 250, "unit": "g", "main": true },
+        { "id": "cabbage", "qty": 150, "unit": "g" },
+        { "id": "ginger_tube", "qty": 2, "unit": "小さじ" },
+        { "id": "soy_sauce", "qty": 2, "unit": "大さじ" },
+        { "id": "mirin", "qty": 2, "unit": "大さじ" },
+        { "id": "sake", "qty": 1, "unit": "大さじ" },
+        { "id": "salad_oil", "qty": 2, "unit": "小さじ" }
+      ],
+      "steps": [
+        "キャベツを千切りにして器に盛る。",
+        "醤油・みりん・酒・生姜を混ぜてタレを作る。",
+        "フライパンに油を熱し、豚肉を炒める。色が変わったらタレを加えて煮からめる。",
+        "キャベツの横に盛り付ける。"
+      ]
+    },
+    "miso_tofu_negi": {
+      "name": "豆腐と長ねぎの味噌汁", "kind": "soup",
+      "ingredients": [
+        { "id": "tofu_kinu", "qty": 150, "unit": "g" },
+        { "id": "negi", "qty": 0.3, "unit": "本" },
+        { "id": "miso", "qty": 1.5, "unit": "大さじ" },
+        { "id": "dashi_granule", "qty": 1, "unit": "小さじ" }
+      ],
+      "steps": [
+        "鍋に水400mlとだしを入れて沸かす。",
+        "さいの目に切った豆腐と小口切りの長ねぎを入れて2分煮る。",
+        "火を弱めて味噌を溶き入れ、沸騰直前で火を止める。"
+      ]
+    },
+    "soboro_don": {
+      "name": "鶏そぼろと炒り卵の二色丼", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_minced", "qty": 200, "unit": "g", "main": true },
+        { "id": "egg", "qty": 2, "unit": "個" },
+        { "id": "soy_sauce", "qty": 1.5, "unit": "大さじ" },
+        { "id": "mirin", "qty": 1, "unit": "大さじ" },
+        { "id": "sugar", "qty": 1, "unit": "大さじ" },
+        { "id": "ginger_tube", "qty": 1, "unit": "小さじ" },
+        { "id": "salad_oil", "qty": 1, "unit": "小さじ" }
+      ],
+      "steps": [
+        "鍋にひき肉・醤油・みりん・砂糖の2/3量・生姜を入れ、菜箸4本でほぐしながら汁気がなくなるまで炒り煮にする。",
+        "卵に残りの砂糖を混ぜ、油をひいたフライパンで細かい炒り卵にする。",
+        "ご飯にそぼろと炒り卵を半分ずつのせる。"
+      ]
+    },
+    "komatsuna_ohitashi": {
+      "name": "小松菜のおひたし", "kind": "side",
+      "ingredients": [
+        { "id": "komatsuna", "qty": 0.5, "unit": "束" },
+        { "id": "soy_sauce", "qty": 2, "unit": "小さじ" },
+        { "id": "dashi_granule", "qty": 0.5, "unit": "小さじ" }
+      ],
+      "steps": [
+        "小松菜を1分ほどゆでて冷水にとり、水気を絞って4cm長さに切る。",
+        "醤油と、少量の湯で溶いただしを合わせてあえる。"
+      ]
+    },
+    "salmon_foil": {
+      "name": "鮭としめじのホイル焼き", "kind": "main",
+      "ingredients": [
+        { "id": "salmon", "qty": 2, "unit": "切れ", "main": true },
+        { "id": "shimeji", "qty": 100, "unit": "g" },
+        { "id": "onion", "qty": 0.5, "unit": "個" },
+        { "id": "sake", "qty": 1, "unit": "大さじ" },
+        { "id": "soy_sauce", "qty": 2, "unit": "小さじ" },
+        { "id": "salt", "qty": 1, "unit": "少々" },
+        { "id": "pepper", "qty": 1, "unit": "少々" }
+      ],
+      "steps": [
+        "鮭に塩・こしょうをふる。しめじはほぐし、玉ねぎは薄切りにする。",
+        "アルミホイルに玉ねぎ・鮭・しめじを順にのせ、酒をふって包む。",
+        "フライパンに並べ、水50mlを入れてふたをし、中火で12分ほど蒸し焼きにする。",
+        "食べる直前に醤油をかける。"
+      ]
+    },
+    "miso_cabbage_carrot": {
+      "name": "キャベツとにんじんの味噌汁", "kind": "soup",
+      "ingredients": [
+        { "id": "cabbage", "qty": 100, "unit": "g" },
+        { "id": "carrot", "qty": 0.3, "unit": "本" },
+        { "id": "miso", "qty": 1.5, "unit": "大さじ" },
+        { "id": "dashi_granule", "qty": 1, "unit": "小さじ" }
+      ],
+      "steps": [
+        "キャベツはざく切り、にんじんは細切りにする。",
+        "水400mlとだしで野菜を4分ほど煮る。",
+        "火を弱めて味噌を溶き入れる。"
+      ]
+    },
+    "yaki_udon": {
+      "name": "豚こまの焼きうどん", "kind": "main",
+      "ingredients": [
+        { "id": "udon", "qty": 2, "unit": "玉" },
+        { "id": "pork_koma", "qty": 150, "unit": "g", "main": true },
+        { "id": "cabbage", "qty": 150, "unit": "g" },
+        { "id": "carrot", "qty": 0.5, "unit": "本" },
+        { "id": "soy_sauce", "qty": 2, "unit": "大さじ" },
+        { "id": "dashi_granule", "qty": 1, "unit": "小さじ" },
+        { "id": "salad_oil", "qty": 2, "unit": "小さじ" },
+        { "id": "pepper", "qty": 1, "unit": "少々" }
+      ],
+      "steps": [
+        "うどんは袋の表示どおり電子レンジで温めてほぐす。キャベツはざく切り、にんじんは短冊切り。",
+        "油で豚肉を炒め、色が変わったら野菜を加えてしんなりするまで炒める。",
+        "うどんを加え、だし・醤油・こしょうで味をととのえる。"
+      ]
+    },
+    "chicken_teriyaki": {
+      "name": "鶏むね肉の照り焼き", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_breast", "qty": 300, "unit": "g", "main": true },
+        { "id": "katakuriko", "qty": 1, "unit": "大さじ" },
+        { "id": "soy_sauce", "qty": 2, "unit": "大さじ" },
+        { "id": "mirin", "qty": 2, "unit": "大さじ" },
+        { "id": "sugar", "qty": 2, "unit": "小さじ" },
+        { "id": "sake", "qty": 1, "unit": "大さじ" },
+        { "id": "salad_oil", "qty": 2, "unit": "小さじ" },
+        { "id": "cabbage", "qty": 100, "unit": "g" }
+      ],
+      "steps": [
+        "鶏むね肉を1cm厚のそぎ切りにし、片栗粉を薄くまぶす。",
+        "油を熱したフライパンで両面を焼き、ふたをして弱火で4分、中まで火を通す。",
+        "醤油・みりん・砂糖・酒を加え、照りが出るまで煮からめる。",
+        "千切りキャベツを添える。"
+      ]
+    },
+    "moyashi_namul": {
+      "name": "もやしのナムル", "kind": "side",
+      "ingredients": [
+        { "id": "moyashi", "qty": 200, "unit": "g" },
+        { "id": "sesame_oil", "qty": 2, "unit": "小さじ" },
+        { "id": "torigara", "qty": 1, "unit": "小さじ" },
+        { "id": "salt", "qty": 1, "unit": "少々" }
+      ],
+      "steps": [
+        "もやしを耐熱容器に入れ、ラップをして電子レンジ（600W）で3分加熱する。",
+        "水気をよく切り、ごま油・鶏ガラスープの素・塩であえる。"
+      ]
+    },
+    "saba_daikon": {
+      "name": "さば缶と大根の煮物", "kind": "main",
+      "ingredients": [
+        { "id": "saba_can", "qty": 1, "unit": "缶", "main": true },
+        { "id": "daikon", "qty": 300, "unit": "g" },
+        { "id": "ginger_tube", "qty": 1, "unit": "小さじ" },
+        { "id": "soy_sauce", "qty": 1, "unit": "大さじ" },
+        { "id": "mirin", "qty": 1, "unit": "大さじ" },
+        { "id": "sugar", "qty": 1, "unit": "小さじ" }
+      ],
+      "steps": [
+        "大根を1.5cm厚のいちょう切りにし、耐熱容器で電子レンジ（600W）5分加熱して下ゆでする。",
+        "鍋に大根・水150ml・醤油・みりん・砂糖・生姜を入れて5分煮る。",
+        "さば缶を汁ごと加え、身を崩しすぎないように5分煮る。"
+      ]
+    },
+    "komatsuna_egg": {
+      "name": "小松菜と卵の炒め物", "kind": "side",
+      "ingredients": [
+        { "id": "komatsuna", "qty": 0.5, "unit": "束" },
+        { "id": "egg", "qty": 2, "unit": "個" },
+        { "id": "sesame_oil", "qty": 1, "unit": "小さじ" },
+        { "id": "torigara", "qty": 0.5, "unit": "小さじ" },
+        { "id": "salt", "qty": 1, "unit": "少々" }
+      ],
+      "steps": [
+        "小松菜を4cm長さに切る。卵は溶いておく。",
+        "ごま油で卵をふんわり炒めて一度取り出す。",
+        "小松菜を茎から炒め、鶏ガラスープの素・塩で味付けし、卵を戻して混ぜる。"
+      ]
+    },
+    "mabo_tofu_wafu": {
+      "name": "鶏ひき肉の和風麻婆豆腐（辛味なし）", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_minced", "qty": 150, "unit": "g", "main": true },
+        { "id": "tofu_kinu", "qty": 300, "unit": "g", "main": true },
+        { "id": "negi", "qty": 0.5, "unit": "本" },
+        { "id": "garlic_tube", "qty": 1, "unit": "小さじ" },
+        { "id": "ginger_tube", "qty": 1, "unit": "小さじ" },
+        { "id": "miso", "qty": 1, "unit": "大さじ" },
+        { "id": "soy_sauce", "qty": 1, "unit": "大さじ" },
+        { "id": "sugar", "qty": 1, "unit": "小さじ" },
+        { "id": "torigara", "qty": 1, "unit": "小さじ" },
+        { "id": "katakuriko", "qty": 2, "unit": "小さじ" },
+        { "id": "sesame_oil", "qty": 2, "unit": "小さじ" }
+      ],
+      "steps": [
+        "豆腐は2cm角、長ねぎはみじん切りにする。片栗粉は同量の水で溶く。",
+        "ごま油でにんにく・生姜・ひき肉を炒め、ポロポロになったら長ねぎを加える。",
+        "水200ml・鶏ガラスープの素・味噌・醤油・砂糖を加えて煮立て、豆腐を入れて3分煮る。",
+        "火を止めて水溶き片栗粉を回し入れ、再び火にかけてとろみをつける。"
+      ]
+    },
+    "pork_moyashi_shio": {
+      "name": "豚こまともやしの塩炒め", "kind": "main",
+      "ingredients": [
+        { "id": "pork_koma", "qty": 200, "unit": "g", "main": true },
+        { "id": "moyashi", "qty": 200, "unit": "g" },
+        { "id": "negi", "qty": 0.3, "unit": "本" },
+        { "id": "torigara", "qty": 1, "unit": "小さじ" },
+        { "id": "sake", "qty": 1, "unit": "大さじ" },
+        { "id": "salt", "qty": 1, "unit": "少々" },
+        { "id": "pepper", "qty": 1, "unit": "少々" },
+        { "id": "sesame_oil", "qty": 2, "unit": "小さじ" }
+      ],
+      "steps": [
+        "長ねぎを斜め薄切りにする。",
+        "ごま油で豚肉を炒め、色が変わったらもやしと長ねぎを加えて強火で1〜2分炒める。",
+        "酒・鶏ガラスープの素・塩・こしょうで味をととのえる。"
+      ]
+    },
+    "chicken_daikon_nimono": {
+      "name": "鶏もも肉と大根の煮物", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_thigh", "qty": 300, "unit": "g", "main": true },
+        { "id": "daikon", "qty": 300, "unit": "g" },
+        { "id": "carrot", "qty": 0.5, "unit": "本" },
+        { "id": "soy_sauce", "qty": 2, "unit": "大さじ" },
+        { "id": "mirin", "qty": 2, "unit": "大さじ" },
+        { "id": "sugar", "qty": 2, "unit": "小さじ" },
+        { "id": "dashi_granule", "qty": 1, "unit": "小さじ" },
+        { "id": "ginger_tube", "qty": 1, "unit": "小さじ" }
+      ],
+      "steps": [
+        "大根は乱切りにして電子レンジ（600W）で5分加熱する。にんじんも乱切り、鶏肉は一口大に切る。",
+        "鍋で鶏肉の皮目から焼き、脂が出たら大根・にんじんを加えて炒め合わせる。",
+        "水300ml・だし・醤油・みりん・砂糖・生姜を入れ、落としぶたをして中弱火で15分煮る。"
+      ]
+    },
+    "egg_fried_rice": {
+      "name": "卵とねぎのチャーハン", "kind": "main",
+      "ingredients": [
+        { "id": "egg", "qty": 3, "unit": "個", "main": true },
+        { "id": "negi", "qty": 0.5, "unit": "本" },
+        { "id": "torigara", "qty": 1, "unit": "小さじ" },
+        { "id": "soy_sauce", "qty": 1, "unit": "小さじ" },
+        { "id": "salt", "qty": 1, "unit": "少々" },
+        { "id": "pepper", "qty": 1, "unit": "少々" },
+        { "id": "sesame_oil", "qty": 1, "unit": "大さじ" }
+      ],
+      "steps": [
+        "長ねぎをみじん切りにし、卵を溶いておく。",
+        "ごま油を強火で熱し、卵を入れてすぐにご飯（2人分の設定量）を加え、ほぐしながら炒める。",
+        "長ねぎ・鶏ガラスープの素・塩・こしょうを加えて炒め、最後に鍋肌から醤油を回し入れる。"
+      ]
+    },
+    "moyashi_soup": {
+      "name": "もやしとねぎの中華スープ", "kind": "soup",
+      "ingredients": [
+        { "id": "moyashi", "qty": 100, "unit": "g" },
+        { "id": "negi", "qty": 0.2, "unit": "本" },
+        { "id": "torigara", "qty": 2, "unit": "小さじ" },
+        { "id": "soy_sauce", "qty": 1, "unit": "小さじ" },
+        { "id": "pepper", "qty": 1, "unit": "少々" }
+      ],
+      "steps": [
+        "鍋に水400mlと鶏ガラスープの素を入れて沸かす。",
+        "もやしと小口切りの長ねぎを入れて2分煮て、醤油・こしょうで味をととのえる。"
+      ]
+    },
+    "chicken_broccoli_garlic": {
+      "name": "鶏むね肉とブロッコリーのにんにく醤油炒め", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_breast", "qty": 300, "unit": "g", "main": true },
+        { "id": "broccoli", "qty": 1, "unit": "株" },
+        { "id": "katakuriko", "qty": 1, "unit": "大さじ" },
+        { "id": "garlic_tube", "qty": 1, "unit": "小さじ" },
+        { "id": "soy_sauce", "qty": 1.5, "unit": "大さじ" },
+        { "id": "sake", "qty": 1, "unit": "大さじ" },
+        { "id": "salad_oil", "qty": 1, "unit": "大さじ" }
+      ],
+      "steps": [
+        "ブロッコリーを小房に分け、電子レンジ（600W）で2分加熱する。",
+        "鶏むね肉を一口大のそぎ切りにし、片栗粉をまぶす。",
+        "油で鶏肉を焼き、中まで火が通ったらブロッコリーを加える。",
+        "にんにく・醤油・酒を加えて全体にからめる。"
+      ]
+    },
+    "nikujaga": {
+      "name": "豚こまの肉じゃが", "kind": "main",
+      "ingredients": [
+        { "id": "pork_koma", "qty": 200, "unit": "g", "main": true },
+        { "id": "potato", "qty": 3, "unit": "個" },
+        { "id": "onion", "qty": 1, "unit": "個" },
+        { "id": "carrot", "qty": 0.5, "unit": "本" },
+        { "id": "soy_sauce", "qty": 2.5, "unit": "大さじ" },
+        { "id": "mirin", "qty": 2, "unit": "大さじ" },
+        { "id": "sugar", "qty": 1, "unit": "大さじ" },
+        { "id": "dashi_granule", "qty": 1, "unit": "小さじ" },
+        { "id": "salad_oil", "qty": 2, "unit": "小さじ" }
+      ],
+      "steps": [
+        "じゃがいもは大きめの一口大、玉ねぎはくし切り、にんじんは乱切りにする。",
+        "鍋に油を熱して豚肉を炒め、色が変わったら野菜を加えて炒める。",
+        "水300ml・だし・砂糖・みりんを加え、落としぶたをして10分煮る。",
+        "醤油を加えてさらに10分、じゃがいもが柔らかくなるまで煮る。"
+      ]
+    },
+    "tofu_hamburg": {
+      "name": "鶏ひき肉と豆腐の照り焼きハンバーグ", "kind": "main",
+      "ingredients": [
+        { "id": "chicken_minced", "qty": 200, "unit": "g", "main": true },
+        { "id": "tofu_kinu", "qty": 150, "unit": "g", "main": true },
+        { "id": "onion", "qty": 0.5, "unit": "個" },
+        { "id": "egg", "qty": 1, "unit": "個" },
+        { "id": "katakuriko", "qty": 2, "unit": "大さじ" },
+        { "id": "salt", "qty": 1, "unit": "少々" },
+        { "id": "pepper", "qty": 1, "unit": "少々" },
+        { "id": "salad_oil", "qty": 2, "unit": "小さじ" },
+        { "id": "soy_sauce", "qty": 1.5, "unit": "大さじ" },
+        { "id": "mirin", "qty": 1.5, "unit": "大さじ" },
+        { "id": "sugar", "qty": 1, "unit": "小さじ" },
+        { "id": "cabbage", "qty": 100, "unit": "g" }
+      ],
+      "steps": [
+        "豆腐はキッチンペーパーで包んで電子レンジ（600W）2分加熱し、水気を切る。玉ねぎはみじん切り。",
+        "ひき肉・豆腐・玉ねぎ・卵・片栗粉・塩・こしょうをよく混ぜ、4等分して小判形にする。",
+        "油で両面を焼き、ふたをして弱火で6分、中まで火を通す。",
+        "醤油・みりん・砂糖を加えて煮からめ、千切りキャベツを添える。"
+      ]
+    }
+  }
+}

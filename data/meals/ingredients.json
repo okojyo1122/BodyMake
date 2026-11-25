@@ -1,0 +1,291 @@
+{
+  "schemaVersion": 1,
+  "priceInfo": {
+    "basis": "東京都内の一般的なスーパーを想定した推定価格（税込・概算）。実店舗から取得した価格ではありません。",
+    "asOf": "2026-11"
+  },
+  "nutritionInfo": {
+    "basis": "日本食品標準成分表（八訂）の一般的な値をもとにした目安。商品・部位・調理法により異なります。"
+  },
+  "labelCheckRiskInfo": {
+    "levels": {
+      "high": "確認優先度：高",
+      "medium": "確認優先度：中",
+      "low": "確認優先度：低"
+    },
+    "note": "確認優先度は、商品ごとの原材料確認がどれだけ必要かを説明するための目安です。実際の危険性（含む・含まない）を断定するものではありません。"
+  },
+  "stapleInfo": "staple: true は常備品（調味料・ジャムなど日持ちし、週をまたいで使うもの）。在庫状態を次週へ引き継ぎ、「通常週の費用」では在庫ありとして扱う。生鮮食品（肉・魚・野菜・卵など）には付けない。",
+  "categories": [
+    { "id": "meat_fish", "label": "肉・魚" },
+    { "id": "egg_soy_dairy", "label": "卵・大豆製品・乳製品" },
+    { "id": "veg", "label": "野菜・きのこ" },
+    { "id": "bread_other", "label": "パン・その他" },
+    { "id": "seasoning", "label": "調味料" }
+  ],
+  "items": {
+    "rice_cooked": {
+      "name": "ご飯（炊いた米）", "category": "bread_other", "unit": "g",
+      "excludedFromBudget": true, "excludedReason": "実家から届くため予算対象外",
+      "purchase": null,
+      "nutrition": { "per": 100, "kcal": 156, "protein": 2.5, "fat": 0.3, "carbs": 37.1 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "chicken_breast": {
+      "name": "鶏むね肉（皮つき）", "category": "meat_fish", "unit": "g", "conversions": { "枚": 250 },
+      "purchase": { "size": 300, "label": "1パック（約300g）", "priceYen": 270, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 133, "protein": 21.3, "fat": 5.9, "carbs": 0.1 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "chicken_thigh": {
+      "name": "鶏もも肉（皮つき）", "category": "meat_fish", "unit": "g", "conversions": { "枚": 300 },
+      "purchase": { "size": 300, "label": "1パック（約300g）", "priceYen": 420, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 190, "protein": 16.6, "fat": 14.2, "carbs": 0 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "chicken_minced": {
+      "name": "鶏ひき肉", "category": "meat_fish", "unit": "g",
+      "purchase": { "size": 300, "label": "1パック（約300g）", "priceYen": 300, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 171, "protein": 17.5, "fat": 12, "carbs": 0 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "pork_koma": {
+      "name": "豚こま切れ肉", "category": "meat_fish", "unit": "g",
+      "purchase": { "size": 300, "label": "1パック（約300g）", "priceYen": 420, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 200, "protein": 18, "fat": 15, "carbs": 0.2 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "salmon": {
+      "name": "生鮭（切り身）", "category": "meat_fish", "unit": "切れ",
+      "purchase": { "size": 2, "label": "1パック（2切れ）", "priceYen": 400, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 99, "protein": 17.8, "fat": 3.3, "carbs": 0.1 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": [],
+      "note": "鮮魚売り場で甲殻類と同じ場所で加工・陳列される場合があります。"
+    },
+    "saba_can": {
+      "name": "さば水煮缶", "category": "meat_fish", "unit": "缶",
+      "purchase": { "size": 1, "label": "1缶（約190g）", "priceYen": 220, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 261, "protein": 31.4, "fat": 16.1, "carbs": 0.3 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["さば"],
+      "labelCheckRisk": "medium", "labelCheckReason": "水産加工品。甲殻類と同じ工場・ラインで製造される場合がある"
+    },
+    "sausage": {
+      "name": "ソーセージ（あらびき）", "category": "meat_fish", "unit": "本",
+      "purchase": { "size": 8, "label": "1袋（約8本）", "priceYen": 250, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 64, "protein": 2.3, "fat": 6.1, "carbs": 0.7 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["豚肉"],
+      "labelCheckRisk": "medium", "labelCheckReason": "加工肉。調味料・エキス類の原材料と製造工場の注意表示が商品ごとに異なる"
+    },
+    "egg": {
+      "name": "卵（Mサイズ）", "category": "egg_soy_dairy", "unit": "個",
+      "purchase": { "size": 10, "label": "1パック（10個）", "priceYen": 300, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 71, "protein": 6.1, "fat": 5.1, "carbs": 0.2 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": ["卵"]
+    },
+    "tofu_kinu": {
+      "name": "絹豆腐", "category": "egg_soy_dairy", "unit": "g", "conversions": { "個": 150 },
+      "purchase": { "size": 450, "label": "3個パック（150g×3）", "priceYen": 130, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 56, "protein": 5.3, "fat": 3.5, "carbs": 2 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["大豆"],
+      "labelCheckRisk": "low", "labelCheckReason": "大豆加工品。原料は単純だが、製造工場の注意表示を確認する"
+    },
+    "natto": {
+      "name": "納豆（たれ付き）", "category": "egg_soy_dairy", "unit": "パック",
+      "purchase": { "size": 3, "label": "3パック入り", "priceYen": 110, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 76, "protein": 6.6, "fat": 4, "carbs": 4.8 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["大豆"],
+      "labelCheckRisk": "medium", "labelCheckReason": "付属のたれ・からしの原材料が商品ごとに異なる（魚介エキス入りのたれがある）",
+      "note": "付属のたれ・からしは原材料を確認してください（たれの栄養は含めていません）。"
+    },
+    "cabbage": {
+      "name": "キャベツ", "category": "veg", "unit": "g", "conversions": { "枚": 50 },
+      "purchase": { "size": 1000, "label": "1玉（約1kg）", "priceYen": 250, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 21, "protein": 1.3, "fat": 0.2, "carbs": 5.2 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "onion": {
+      "name": "玉ねぎ", "category": "veg", "unit": "個",
+      "purchase": { "size": 3, "label": "1袋（3個）", "priceYen": 220, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 59, "protein": 1.8, "fat": 0.2, "carbs": 15.1 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "carrot": {
+      "name": "にんじん", "category": "veg", "unit": "本",
+      "purchase": { "size": 3, "label": "1袋（3本）", "priceYen": 180, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 53, "protein": 1.1, "fat": 0.3, "carbs": 14 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "moyashi": {
+      "name": "もやし", "category": "veg", "unit": "g", "conversions": { "袋": 200 },
+      "purchase": { "size": 200, "label": "1袋（約200g）", "priceYen": 40, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 15, "protein": 1.7, "fat": 0.1, "carbs": 2.6 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "komatsuna": {
+      "name": "小松菜", "category": "veg", "unit": "束",
+      "purchase": { "size": 1, "label": "1束（約200g）", "priceYen": 160, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 26, "protein": 3, "fat": 0.4, "carbs": 4.8 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "negi": {
+      "name": "長ねぎ", "category": "veg", "unit": "本",
+      "purchase": { "size": 1, "label": "1本", "priceYen": 110, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 35, "protein": 1.4, "fat": 0.1, "carbs": 8.3 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "shimeji": {
+      "name": "しめじ", "category": "veg", "unit": "g", "conversions": { "パック": 100 },
+      "purchase": { "size": 100, "label": "1パック（約100g）", "priceYen": 110, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 26, "protein": 2.7, "fat": 0.5, "carbs": 4.8 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "daikon": {
+      "name": "大根", "category": "veg", "unit": "g", "conversions": { "本": 1000 },
+      "purchase": { "size": 1000, "label": "1本（約1kg）", "priceYen": 220, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 15, "protein": 0.5, "fat": 0.1, "carbs": 4.1 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "broccoli": {
+      "name": "ブロッコリー", "category": "veg", "unit": "株",
+      "purchase": { "size": 1, "label": "1株", "priceYen": 250, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 74, "protein": 10.8, "fat": 1.2, "carbs": 13.2 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "potato": {
+      "name": "じゃがいも", "category": "veg", "unit": "個",
+      "purchase": { "size": 4, "label": "1袋（4個）", "priceYen": 230, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 77, "protein": 2.3, "fat": 0.1, "carbs": 22.5 },
+      "processed": false, "allergenStatus": "free", "containsAllergens": []
+    },
+    "mekabu": {
+      "name": "めかぶ（たれ付き）", "category": "veg", "unit": "パック",
+      "purchase": { "size": 3, "label": "3パック入り", "priceYen": 130, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 6, "protein": 0.4, "fat": 0.2, "carbs": 1.4 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "high", "labelCheckReason": "付属のたれにだし（魚介エキス）が使われている",
+      "note": "付属のたれ（だし入り）は原材料を確認してください。"
+    },
+    "bread_6": {
+      "name": "食パン（6枚切り）", "category": "bread_other", "unit": "枚",
+      "purchase": { "size": 6, "label": "1袋（6枚）", "priceYen": 180, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 149, "protein": 5.3, "fat": 2.5, "carbs": 27.8 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["小麦", "乳"],
+      "labelCheckRisk": "medium", "labelCheckReason": "工場製造品。製造工場の注意表示が商品ごとに異なる"
+    },
+    "jam": {
+      "name": "ジャム（いちご）", "category": "bread_other", "unit": "g", "conversions": { "大さじ": 21, "小さじ": 7 }, "staple": true,
+      "purchase": { "size": 250, "label": "1瓶（約250g）", "priceYen": 330, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 250, "protein": 0.4, "fat": 0.1, "carbs": 63 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "原料は果物・糖類が中心。包装食品のため表示を確認する"
+    },
+    "udon": {
+      "name": "ゆでうどん", "category": "bread_other", "unit": "玉",
+      "purchase": { "size": 3, "label": "1袋（3玉）", "priceYen": 130, "priceStatus": "estimated" },
+      "nutrition": { "per": 1, "kcal": 190, "protein": 5.2, "fat": 0.8, "carbs": 43.2 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["小麦"],
+      "labelCheckRisk": "medium", "labelCheckReason": "工場製造品。甲殻類を扱う工場で製造される場合がある"
+    },
+    "soy_sauce": {
+      "name": "醤油（濃口）", "category": "seasoning", "unit": "ml", "conversions": { "大さじ": 15, "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 1000, "label": "1本（1L）", "priceYen": 330, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 89, "protein": 8.9, "fat": 0, "carbs": 9.1 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["大豆", "小麦"],
+      "labelCheckRisk": "medium", "labelCheckReason": "「だし醤油」など魚介エキス入りの商品があるため、通常の濃口醤油かを確認する"
+    },
+    "mirin": {
+      "name": "本みりん", "category": "seasoning", "unit": "ml", "conversions": { "大さじ": 15, "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 500, "label": "1本（500ml）", "priceYen": 320, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 282, "protein": 0.4, "fat": 0, "carbs": 50.5 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "醸造調味料。みりん風調味料など原材料が異なる商品がある"
+    },
+    "sake": {
+      "name": "料理酒", "category": "seasoning", "unit": "ml", "conversions": { "大さじ": 15, "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 500, "label": "1本（500ml）", "priceYen": 260, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 95, "protein": 0.2, "fat": 0, "carbs": 4.7 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "醸造調味料。商品によって添加物が異なる"
+    },
+    "sugar": {
+      "name": "砂糖（上白糖）", "category": "seasoning", "unit": "g", "conversions": { "大さじ": 9, "小さじ": 3 }, "staple": true,
+      "purchase": { "size": 1000, "label": "1袋（1kg）", "priceYen": 260, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 391, "protein": 0, "fat": 0, "carbs": 99.3 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "単一原料に近いが、包装食品のため表示を確認する"
+    },
+    "salt": {
+      "name": "塩", "category": "seasoning", "unit": "g", "conversions": { "小さじ": 6, "少々": 0.5 }, "staple": true,
+      "purchase": { "size": 1000, "label": "1袋（1kg）", "priceYen": 130, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 0, "protein": 0, "fat": 0, "carbs": 0 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "単一原料に近いが、調味塩（うま味調味料・エキス入り）は原材料が異なる"
+    },
+    "pepper": {
+      "name": "こしょう", "category": "seasoning", "unit": "g", "conversions": { "少々": 0.1 }, "staple": true,
+      "purchase": { "size": 20, "label": "1瓶（約20g）", "priceYen": 200, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 362, "protein": 11, "fat": 6, "carbs": 66.6 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "単一原料に近いが、ミックス・調味こしょうは原材料が異なる"
+    },
+    "salad_oil": {
+      "name": "サラダ油", "category": "seasoning", "unit": "ml", "conversions": { "大さじ": 15, "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 1000, "label": "1本（約1L）", "priceYen": 450, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 815, "protein": 0, "fat": 92, "carbs": 0 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "単一原料に近いが、包装食品のため表示を確認する"
+    },
+    "sesame_oil": {
+      "name": "ごま油", "category": "seasoning", "unit": "ml", "conversions": { "大さじ": 15, "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 160, "label": "1本（約160ml）", "priceYen": 330, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 815, "protein": 0, "fat": 92, "carbs": 0 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["ごま"],
+      "labelCheckRisk": "low", "labelCheckReason": "単一原料に近いが、包装食品のため表示を確認する"
+    },
+    "miso": {
+      "name": "味噌", "category": "seasoning", "unit": "g", "conversions": { "大さじ": 18, "小さじ": 6 }, "staple": true,
+      "purchase": { "size": 750, "label": "1パック（750g）", "priceYen": 380, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 182, "protein": 12.5, "fat": 6, "carbs": 21.9 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": ["大豆"],
+      "labelCheckRisk": "high", "labelCheckReason": "だし入り味噌は魚介エキスを含むことがある",
+      "note": "だし入り味噌は魚介エキスを含む場合があります。"
+    },
+    "dashi_granule": {
+      "name": "顆粒和風だし", "category": "seasoning", "unit": "g", "conversions": { "小さじ": 3 }, "staple": true,
+      "purchase": { "size": 60, "label": "1箱（約60g）", "priceYen": 300, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 223, "protein": 24.2, "fat": 0.3, "carbs": 31.1 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "high", "labelCheckReason": "魚介エキス配合の商品があり、えびエキスを含むものがある",
+      "note": "魚介エキス配合の商品があります。えび・かにの表示を必ず確認してください。"
+    },
+    "torigara": {
+      "name": "鶏ガラスープの素（顆粒）", "category": "seasoning", "unit": "g", "conversions": { "小さじ": 2.5 }, "staple": true,
+      "purchase": { "size": 50, "label": "1袋（約50g）", "priceYen": 280, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 210, "protein": 10, "fat": 2, "carbs": 38 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "high", "labelCheckReason": "中華系スープの素には甲殻類（えび・かに）エキスを含む商品がある",
+      "note": "中華系スープの素には甲殻類エキスを含む商品があります。"
+    },
+    "ginger_tube": {
+      "name": "おろし生姜（チューブ）", "category": "seasoning", "unit": "g", "conversions": { "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 40, "label": "1本（約40g）", "priceYen": 130, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 40, "protein": 0.5, "fat": 0.5, "carbs": 9 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "medium", "labelCheckReason": "加工調味料。添加物・調味料の原材料が商品ごとに異なる"
+    },
+    "garlic_tube": {
+      "name": "おろしにんにく（チューブ）", "category": "seasoning", "unit": "g", "conversions": { "小さじ": 5 }, "staple": true,
+      "purchase": { "size": 40, "label": "1本（約40g）", "priceYen": 130, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 100, "protein": 2, "fat": 0.5, "carbs": 22 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "medium", "labelCheckReason": "加工調味料。添加物・調味料の原材料が商品ごとに異なる"
+    },
+    "katakuriko": {
+      "name": "片栗粉", "category": "seasoning", "unit": "g", "conversions": { "大さじ": 9, "小さじ": 3 }, "staple": true,
+      "purchase": { "size": 200, "label": "1袋（約200g）", "priceYen": 160, "priceStatus": "estimated" },
+      "nutrition": { "per": 100, "kcal": 338, "protein": 0.1, "fat": 0.1, "carbs": 81.6 },
+      "processed": true, "allergenStatus": "needs_label_check", "containsAllergens": [],
+      "labelCheckRisk": "low", "labelCheckReason": "単一原料に近いが、包装食品のため表示を確認する"
+    }
+  }
+}
